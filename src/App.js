@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React from 'react';
+import './App.css';
+import Cart from './components/cart';
+import Total from './components/total';
+import Products from './components/products';
 
-const App = () => {
-  const [counter, setCounter] = useState(0);
+function App() {
 
-  const increment = () => {
-    setCounter(counter + 1);
-  };
   return (
-    <div>
-      Пустой проект
-      <button onClick={increment}>Increment</button>
-      {counter}
+    <div className="App">
+      <h1>Магазин</h1>
+      <Products />
+      <Cart />
+      <Total />
     </div>
   );
-};
+}
 
 export default App;
