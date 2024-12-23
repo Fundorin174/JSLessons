@@ -15,7 +15,7 @@ const Products = () => {
   }, [])
 
   const productsItems = useSelector(state => state.product.products);
-  console.log(productsItems);
+  //console.log(productsItems);
   if (!productsItems.length) return null;
 
   return (<>
