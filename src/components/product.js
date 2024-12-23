@@ -1,20 +1,26 @@
-import React from 'react';
-import { useDispatch, useSelector } from "react-redux";
-import { add, remove } from '../store/cartSlice';
+import { useDispatch } from "react-redux";
+import { addToCart, remove } from "../store/productSlice";
+import React, { useState } from "react";
 
-const Product = () => {
-  const quantity = useSelector(state => state.cart.quantity);
+const Product = ({ product, isCart }) => {
   const dispatch = useDispatch();
 
-  return (<div >
-    <h1>Iphone</h1>
-    <div className="product">
-      <button onClick={() => dispatch(remove())}>-</button>
-      <p>{quantity}</p>
-      <button onClick={() => dispatch(add())}>+</button>
-    </div>
+  const [showDescription, setShowDescription] = useState(false);
 
-  </div>);
+  return <div className='product'>
+    <p>{product.title}</p>
+    <p>{`${product.price} руб`}</p>
+    {isCart ?
+      <div className='counter'>
+        <button onClick={() => dispatch(remove(product.id))}>-</button>
+        {product.quantity ?? 0}
+        <button onClick={() => dispatch(addToCart(product))}>+</button>
+      </div>
+      :
+      <button onClick={() => dispatch(addToCart(product))}>В корзину</button>}
+    <button onClick={() => setShowDescription(!showDescription)}>{showDescription ? 'Скрыть описание' : 'Показать описание'}</button>
+    {showDescription && <p>{product.description}</p>}
+  </div>;
 }
 
 export default Product;
