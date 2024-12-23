@@ -1,18 +1,18 @@
 import React from 'react';
 import './App.css';
 import Cart from './components/cart';
-import Total from './components/total';
 import Products from './components/products';
+import { Route, Routes } from 'react-router-dom';
 
-function App() {
-
+const App = () => {
   return (
-    <div className="App">
-      <h1>Магазин</h1>
-      <Products />
-      <Cart />
-      <Total />
-    </div>
+      <div className="App">
+        <h1>Магазин</h1>
+        <Routes>
+          <Route path="/" element={<Products />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </div>
   );
 }
 
