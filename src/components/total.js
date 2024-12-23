@@ -2,11 +2,11 @@ import React from 'react';
 import { useSelector } from "react-redux";
 
 const Total = () => {
-  const quantity = useSelector(state => state.cart.quantity);
-  const price = quantity* 100;
+  const selectedProducts = useSelector(state => state.product.selected);
+  const price = selectedProducts.reduce( (a, b) => a + b.quantity * b.price, 0)
   return (<div>
-    <h1>Total</h1>
-    <p>Общая стоимость:<span>{price}</span></p>
+    <h1>Всего</h1>
+    <p>Общая стоимость:<span>{Math.round(price)}</span></p>
   </div>);
 }
 
