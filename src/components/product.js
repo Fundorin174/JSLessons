@@ -1,11 +1,17 @@
 import { useDispatch } from "react-redux";
 import { addToCart, remove } from "../store/productSlice";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Product = ({ product, isCart }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [showDescription, setShowDescription] = useState(false);
+
+  const openCart = () => {
+    navigate(`/${product.id}`);
+  }
 
   return <div className='product'>
     <p>{product.title}</p>
@@ -18,6 +24,7 @@ const Product = ({ product, isCart }) => {
       </div>
       :
       <button onClick={() => dispatch(addToCart(product))}>В корзину</button>}
+    <button onClick={openCart}>Окрыть</button>
     <button onClick={() => setShowDescription(!showDescription)}>{showDescription ? 'Скрыть описание' : 'Показать описание'}</button>
     {showDescription && <p>{product.description}</p>}
   </div>;

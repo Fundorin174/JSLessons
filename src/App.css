@@ -11,7 +11,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
     -webkit-animation: App-logo-spin infinite 20s linear;
-}
+  }
 }
 
 .App-header {
@@ -28,6 +28,7 @@
 .App-link {
   color: #61dafb;
 }
+
 .products {
   width: 100%;
   display: flex;
@@ -48,6 +49,15 @@
   padding: 20px;
 }
 
+.imageWrap {
+  max-width: 100%;
+  max-height: 200px;
+}
+
+img {
+  width: 100%;
+}
+
 .counter {
   display: flex;
   flex-direction: row;
@@ -58,6 +68,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
