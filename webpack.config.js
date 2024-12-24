@@ -2,10 +2,11 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
-  entry: "./index.js",
+  entry: "./src/index.jsx",
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "main.js",
+    chunkFilename: "[name].chunk.js",
   },
 
   target: "web",
@@ -15,6 +16,7 @@ module.exports = {
     open: true,
     hot: true,
     liveReload: true,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: [".js", ".jsx", ".json", ".ts"],
