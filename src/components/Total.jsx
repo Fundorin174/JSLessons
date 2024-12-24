@@ -6,7 +6,7 @@ const Total = () => {
   const price = selectedProducts.reduce( (a, b) => a + b.quantity * b.price, 0)
   return (<div>
     <h1>Всего</h1>
-    <p>Общая стоимость:<span>{Math.round(price)}</span></p>
+    <p>Общая стоимость:<span>{price.toFixed(2)}</span></p>
   </div>);
 }
 
