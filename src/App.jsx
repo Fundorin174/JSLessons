@@ -4,6 +4,7 @@ import Products from './components/Products';
 import Cart from './components/Cart';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/navBar';
+import CatalogItem from './components/CatalogItem';
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path=":id" element={<CatalogItem />} />
+          <Route path="*" element={<div>Страница не найдена</div>} />
         </Routes>
       </div>
   );

@@ -4,11 +4,15 @@ export const productSlice = createSlice({
   name: 'product',
   initialState: {
     products: [],
+    catalogItem: undefined,
     selected: [],
   },
   reducers: {
     setProducts: (state, action) => {
       state.products = action.payload;
+    },
+    setCatalogItem: (state, action) => {
+      state.catalogItem = action.payload;
     },
     addToCart: (state, action) => {
       const index = state.selected.findIndex(product => product.id === action.payload.id);
@@ -32,5 +36,5 @@ export const productSlice = createSlice({
     },
   }
 });
-export const { addToCart, remove, setProducts } = productSlice.actions;
+export const { addToCart, remove, setProducts, setCatalogItem } = productSlice.actions;
 export default productSlice.reducer;
