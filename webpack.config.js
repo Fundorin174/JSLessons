@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "main.js",
+    chunkFilename: "[name].chunk.js",
   },
 
   target: "web",
@@ -18,7 +19,7 @@ module.exports = {
     historyApiFallback: true,
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json", ".ts", "tsx"],
+    extensions: [".js", ".jsx", ".json", ".ts"],
   },
   module: {
     rules: [
