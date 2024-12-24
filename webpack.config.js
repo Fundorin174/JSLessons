@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
-  entry: "./index.jsx",
+  entry: "./src/index.jsx",
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "main.js",
@@ -18,7 +18,7 @@ module.exports = {
     historyApiFallback: true,
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json", ".ts"],
+    extensions: [".js", ".jsx", ".json", ".ts", "tsx"],
   },
   module: {
     rules: [
