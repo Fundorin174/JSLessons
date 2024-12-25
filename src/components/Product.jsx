@@ -9,7 +9,7 @@ const Product = ({ productItem, isCart }) => {
   const [showDescription, setShowDescription] = useState(false);
   
   const openCart = () => {
-    navigate(`/${productItem.id}`);
+    navigate(`product/${productItem.id}`);
   }
 
   if (!productItem) return null

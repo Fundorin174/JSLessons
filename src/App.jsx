@@ -11,26 +11,23 @@ const LazyCart = lazy(() => import('./components/Cart'));
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Магазин</h1>
-      <NavBar />
+    <Suspense fallback={<div>Загрузка...</div>}>
       <Routes>
-        <Route index element={
-          <Suspense fallback={<div>Загрузка...</div>}>
+        <Route path="/" element={<NavBar />} >
+          <Route index element={
             <LazyProducts />
-          </Suspense>
-        } />
-        <Route path="/cart" element={
-          <Suspense fallback={<div>Загрузка...</div>}>
+          } />
+          <Route path="cart" element={
             <LazyCart />
-          </Suspense>
-        } />
-        <Route path=":id" element={
-          <CatalogItem />
-        } />
+          } />
+          <Route path="product/:id" element={
+            <CatalogItem />
+          } />
+           
+        </Route>
         <Route path="*" element={<div>Страница не найдена</div>} />
       </Routes>
-    </div>
+    </Suspense>
   );
 }
 

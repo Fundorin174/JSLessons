@@ -5,8 +5,7 @@ module.exports = {
   entry: "./src/index.jsx",
   output: {
     path: path.resolve(__dirname, "public"),
-    filename: "main.js",
-    chunkFilename: "[name].chunk.js",
+    filename: "[name].bundle.js",
   },
 
   target: "web",
