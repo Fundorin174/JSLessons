@@ -1,3 +1,4 @@
+import './styles/main.scss';
 import {randomGradient} from "./randomGradient.js";
 
 const body = document.querySelector('body');
