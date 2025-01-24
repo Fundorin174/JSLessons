@@ -1,6 +1,10 @@
 {
-  "amd": {},
-  "volo": {
-    "baseUrl": "www/lib"
-  }
+  "name": "Webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
 }
