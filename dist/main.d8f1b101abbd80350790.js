@@ -110,13 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/assets/magic_wand_545451_defda6-481142-9ebb1b.svg":
+/*!***************************************************************!*\
+  !*** ./src/assets/magic_wand_545451_defda6-481142-9ebb1b.svg ***!
+  \***************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"eaa7c370442bc756f8d5.svg\";\n\n//# sourceURL=webpack://Webpack/./src/assets/magic_wand_545451_defda6-481142-9ebb1b.svg?");
+
+/***/ }),
+
 /***/ "./src/gradient.js":
 /*!*************************!*\
   !*** ./src/gradient.js ***!
   \*************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   gradient: () => (/* binding */ gradient)\n/* harmony export */ });\nconst gradient = (start, finish) => {\n  return `linear-gradient(4deg, ${start} 0%, ${finish} 100%)`\n}\n\n//# sourceURL=webpack://Webpack/./src/gradient.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   gradient: () => (/* binding */ gradient)\n/* harmony export */ });\nvar gradient = function gradient(start, finish) {\n  return \"linear-gradient(4deg, \".concat(start, \" 0%, \").concat(finish, \" 100%)\");\n};\n\n//# sourceURL=webpack://Webpack/./src/gradient.js?");
 
 /***/ }),
 
@@ -126,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _randomGradient_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./randomGradient.js */ \"./src/randomGradient.js\");\n\n\n\nconst body = document.querySelector('body');\nconst button = document.querySelector('button');\n\nbutton.addEventListener('click', () => {\n  body.style.background = (0,_randomGradient_js__WEBPACK_IMPORTED_MODULE_1__.randomGradient)();\n})\n\nconsole.log('+++++')\n\n//# sourceURL=webpack://Webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _assets_magic_wand_545451_defda6_481142_9ebb1b_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/magic_wand_545451_defda6-481142-9ebb1b.svg */ \"./src/assets/magic_wand_545451_defda6-481142-9ebb1b.svg\");\n/* harmony import */ var _randomGradient_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./randomGradient.js */ \"./src/randomGradient.js\");\n\n\n\nvar body = document.querySelector('body');\nvar button = document.querySelector('button');\nvar image = document.querySelector('#wand');\nimage.src = _assets_magic_wand_545451_defda6_481142_9ebb1b_svg__WEBPACK_IMPORTED_MODULE_1__;\nbutton.addEventListener('click', function () {\n  body.style.background = (0,_randomGradient_js__WEBPACK_IMPORTED_MODULE_2__.randomGradient)();\n});\nconsole.log('+++++');\n\n//# sourceURL=webpack://Webpack/./src/index.js?");
 
 /***/ }),
 
@@ -136,7 +146,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \****************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   randomColor: () => (/* binding */ randomColor)\n/* harmony export */ });\nconst randomColor = () => {\n  const letters = '0123456789ABCDEF';\n\n  const color = [...Array(6)].reduce((acc, current) => acc + letters[Math.floor(Math.random() * 16)], \"#\")\n\n  return color;\n};\n\n//# sourceURL=webpack://Webpack/./src/randomColor.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   randomColor: () => (/* binding */ randomColor)\n/* harmony export */ });\nfunction _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(r, a) { if (r) { if (\"string\" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return \"Object\" === t && r.constructor && (t = r.constructor.name), \"Map\" === t || \"Set\" === t ? Array.from(r) : \"Arguments\" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }\nfunction _iterableToArray(r) { if (\"undefined\" != typeof Symbol && null != r[Symbol.iterator] || null != r[\"@@iterator\"]) return Array.from(r); }\nfunction _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }\nfunction _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }\nvar randomColor = function randomColor() {\n  var letters = '0123456789ABCDEF';\n  var color = _toConsumableArray(Array(6)).reduce(function (acc, current) {\n    return acc + letters[Math.floor(Math.random() * 16)];\n  }, \"#\");\n  return color;\n};\n\n//# sourceURL=webpack://Webpack/./src/randomColor.js?");
 
 /***/ }),
 
@@ -146,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   randomGradient: () => (/* binding */ randomGradient)\n/* harmony export */ });\n/* harmony import */ var _randomColor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./randomColor.js */ \"./src/randomColor.js\");\n/* harmony import */ var _gradient_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gradient.js */ \"./src/gradient.js\");\n\n\n\nconst randomGradient = () => {\n  const colorStart = (0,_randomColor_js__WEBPACK_IMPORTED_MODULE_0__.randomColor)();\n  const colorFinish = (0,_randomColor_js__WEBPACK_IMPORTED_MODULE_0__.randomColor)();\n\n  return (0,_gradient_js__WEBPACK_IMPORTED_MODULE_1__.gradient)(colorStart, colorFinish);\n}\n\n//# sourceURL=webpack://Webpack/./src/randomGradient.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   randomGradient: () => (/* binding */ randomGradient)\n/* harmony export */ });\n/* harmony import */ var _randomColor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./randomColor.js */ \"./src/randomColor.js\");\n/* harmony import */ var _gradient_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gradient.js */ \"./src/gradient.js\");\n\n\nvar randomGradient = function randomGradient() {\n  var colorStart = (0,_randomColor_js__WEBPACK_IMPORTED_MODULE_0__.randomColor)();\n  var colorFinish = (0,_randomColor_js__WEBPACK_IMPORTED_MODULE_0__.randomColor)();\n  return (0,_gradient_js__WEBPACK_IMPORTED_MODULE_1__.gradient)(colorStart, colorFinish);\n};\n\n//# sourceURL=webpack://Webpack/./src/randomGradient.js?");
 
 /***/ })
 
@@ -201,6 +211,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -215,6 +237,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
