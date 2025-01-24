@@ -6,7 +6,16 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
+    clean: true,
+  },
+  devServer: {
+    port: 3000,
+    open: true,
+    hot: true,
+    historyApiFallback: true,
+    static: path.resolve(__dirname, 'dist'),
+    compress: true,
   },
   module: {
     rules: [

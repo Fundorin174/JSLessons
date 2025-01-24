@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _randomGradient_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./randomGradient.js */ \"./src/randomGradient.js\");\n\n\n\nconst body = document.querySelector('body');\nconst button = document.querySelector('button');\n\nbutton.addEventListener('click', () => {\n  body.style.background = (0,_randomGradient_js__WEBPACK_IMPORTED_MODULE_1__.randomGradient)();\n})\n\n//# sourceURL=webpack://Webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _randomGradient_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./randomGradient.js */ \"./src/randomGradient.js\");\n\n\n\nconst body = document.querySelector('body');\nconst button = document.querySelector('button');\n\nbutton.addEventListener('click', () => {\n  body.style.background = (0,_randomGradient_js__WEBPACK_IMPORTED_MODULE_1__.randomGradient)();\n})\n\nconsole.log('+++++')\n\n//# sourceURL=webpack://Webpack/./src/index.js?");
 
 /***/ }),
 
