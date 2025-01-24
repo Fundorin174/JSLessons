@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWeppackPlugin = require('html-webpack-plugin');
+const BundleanalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: "development",
@@ -40,5 +41,6 @@ module.exports = {
   },
   plugins: [
     new HtmlWeppackPlugin({ title: 'Gradient generator', filename: 'index.html', template: './src/index.html' }),
+    new BundleanalyzerPlugin(),
   ]
 }
