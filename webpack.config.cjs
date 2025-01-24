@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWeppackPlugin = require('html-webpack-plugin');
 const BundleanalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   mode: "development",
@@ -25,16 +26,16 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-        test: /\.js$/, 
-        exclude: /node_modules/, 
-        loader: 'babel-loader', 
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env']
         }
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',        
+        type: 'asset/resource',
       }
     ],
 
@@ -42,5 +43,6 @@ module.exports = {
   plugins: [
     new HtmlWeppackPlugin({ title: 'Gradient generator', filename: 'index.html', template: './src/index.html' }),
     new BundleanalyzerPlugin(),
+    new ESLintPlugin(),
   ]
-}
+};
