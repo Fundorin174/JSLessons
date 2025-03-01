@@ -2,11 +2,10 @@
 
 ## How to use
 
-Run the following commands in the root directory.
+Run the following commands in the /app2 directory, and then in /app1 directory.
 
 ```bash
-yarn
-yarn start
+npm run start
 ```
 
 Both `app1` and `app2` are independently deployed apps:
