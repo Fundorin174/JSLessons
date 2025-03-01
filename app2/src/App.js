@@ -1,4 +1,5 @@
 import React from "react";
+import ModuleBtn from "./ModuleBtn";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
         backgroundColor: "cyan"
       }}>
         <h1>Каталог</h1>
+        <ModuleBtn />
       </div>
     </div>)
 }
