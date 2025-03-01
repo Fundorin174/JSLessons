@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const { ModuleFederationPlugin } = require("webpack").container;
 
 module.exports = {
   entry: "./src/index",
@@ -28,6 +29,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+    }),
+    new ModuleFederationPlugin({
+      name: "app1",
+      remotes: {
+        app2: "app2@http://localhost:3002/remoteEntry.js",
+      },
+      shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),
   ],
 };
