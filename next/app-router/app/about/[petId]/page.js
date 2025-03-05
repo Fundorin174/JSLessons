@@ -1,3 +1,5 @@
+import Cart from "./cart";
+
 const Pet = async ({ params }) => {
   const { petId } = await params;
   const response = await fetch(`https://petstore.swagger.io/v2/pet/${petId}`);
@@ -10,6 +12,8 @@ const Pet = async ({ params }) => {
       <p>{`id: ${pet.id}`}</p>
       <p>{`name: ${pet.name}`}</p>
       <p>{`status: ${pet.status}`}</p>
+
+      <Cart petId={petId} />
     </div>
 
   )
