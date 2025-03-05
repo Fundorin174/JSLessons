@@ -1,3 +1,3 @@
-node_modules
-.vscode
-.cache
+/cra/node_modules
+/next/node_modules
+/next/app-router/node_modules
